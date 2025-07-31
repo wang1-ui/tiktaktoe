@@ -2,7 +2,7 @@ A fun and creative twist on the classic Tic Tac Toe game! Instead of X and O, pl
 
 🔗 Live Demo
 
-Click here to play (https://wang1-ui.github.io/tiktaktoe/)
+Click here to play (https://tiktaktoe-gray.vercel.app/)
 
 
 ---
