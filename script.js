@@ -21,9 +21,7 @@ function createBoard() {
   gameOver = false;
   statusText.textContent = `${currentPlayer}'s turn`;
   if (bgMusic.paused) {
-    bgMusic.play().catch(err => {
-     
-      console.log('Background music blocked until user interacts.');
+    bgMusic.play().catch(err => {console.log('Background music blocked until user interacts.');
     });
   }
 
