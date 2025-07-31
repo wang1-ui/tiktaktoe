@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    background-color: #f0f0f0;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+  }
+  
+  .cell {
+    background-color: white;
+    border: 2px solid #333;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+  }
+  
+  .cell:hover {
+    background-color: #e0e0e0;
+  }
+  .message{
+    margin-top: 50px;
+    font-size: 200rem;
+    color: #333;
+  }
+  

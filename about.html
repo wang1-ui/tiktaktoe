@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" id="playBtn">Play</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="https://github.com/wang1-ui" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <div class="about-content">
+    <h1>このゲームについて</h1>
+  <p>この〇✕ゲームは、HTML、CSS、JavaScript を使って作りました。</p>
+  <p>ふつうの「X」と「O」のかわりに、画像を使って楽しくプレイできます。</p>
+  <p>このゲームは <strong>サンディープ・マジ</strong> が作りました。</p>
+  <p>GitHub で他のプロジェクトも見られます： <a href="https://github.com/wang1-ui" target="_blank">GitHub</a>.</p>
+  </div>
+</body>
+</html>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #c1cad6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .navbar {
+  width: 100%;
+  background-color:#f26a8d;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+  .about-content {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #cbeef3;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+    .about-content h1 {
+        text-align: center;
+        color: #f26a8d;
+    }
+    .about-content p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+  .about-content a {
+    color: #f26a8d;
+    text-decoration: none;
+  }
+  .about-content a:hover {
+    text-decoration: underline;
+  }
+</style>
