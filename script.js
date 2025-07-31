@@ -1,14 +1,31 @@
 const board = document.getElementById('board');
 const statusText = document.getElementById('status');
+
+const bgMusic = new Audio('background.mp3');
+const winSound = new Audio('win.mp3');
+const drawSound = new Audio('draw.mp3');
+const clickSound = new Audio('click.mp3');
+
+bgMusic.loop = true;
+bgMusic.volume = 0.3;
+
 let cells = [];
 let currentPlayer = 'maya';
 let gameOver = false;
+
+
 
 function createBoard() {
   board.innerHTML = '';
   cells = [];
   gameOver = false;
   statusText.textContent = `${currentPlayer}'s turn`;
+  if (bgMusic.paused) {
+    bgMusic.play().catch(err => {
+     
+      console.log('Background music blocked until user interacts.');
+    });
+  }
 
   for (let i = 0; i < 9; i++) {
     const cell = document.createElement('div');
@@ -21,6 +38,7 @@ function createBoard() {
 
 function handleClick(index) {
   if (cells[index].hasChildNodes() || gameOver) return;
+  clickSound.play();
 
   const img = document.createElement('img');
   img.src = currentPlayer === 'maya' ? 'x.png' : 'o.png';
@@ -31,12 +49,14 @@ function handleClick(index) {
 
   if (checkWin()) {
     statusText.textContent = `${currentPlayer} wins!`;
+    winSound.play();
     gameOver = true;
     return;
   }
 
   if (cells.every(cell => cell.hasChildNodes())) {
     statusText.textContent = "It's a draw!";
+    drawSound.play();
     gameOver = true;
     return;
   }
@@ -67,7 +87,7 @@ function checkWin() {
   });
 }
 document.getElementById('playBtn').addEventListener('click', (e) => {
-  e.preventDefault(); // prevent link from jumping
+  e.preventDefault(); 
   resetGame();
 });
 
